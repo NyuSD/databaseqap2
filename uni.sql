@@ -34,3 +34,8 @@ INSERT INTO students (first_name, last_name, email, school_enrollment_date) VALU
 ('Jesse', 'Dane', 'JesseDane@email.com', '2000-06-01'),
 ('Hazel', 'Lamb', 'HazelLamb@email.com', '20001-06-01');
 
+INSERT INTO professors (first_name, last_name, department) VALUES 
+('Joe', 'Marsh', 'Math'),
+('Laura', 'Barber', 'Science'),
+('Lillian', 'White', 'History'),
+('Maia', 'Odling', 'English');
