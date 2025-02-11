@@ -63,3 +63,8 @@ SELECT products.product_name, order_items.quantity FROM products
 JOIN order_items
   ON products.id = order_items.product_id;
 WHERE order_items.order_id = 1;
+
+SELECT orders.id, order_items.product_id, order_items.quantity FROM orders
+JOIN order_items
+  ON orders.id = order_items.order_id;
+WHERE orders.customer_id = 1;
