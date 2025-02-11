@@ -44,3 +44,10 @@ INSERT INTO courses (course_name, course_description, professor_id) VALUES
 ('Algebra', 'algebra course', 1),
 ('Biology', 'biology course', 2),
 ('World History', 'world history course', 3);
+
+INSERT INTO enrollments (student_id, course_id, enrollment_date) VALUES 
+(1, 3, '2000-01-01'),
+(2, 1, '2000-01-01'),
+(3, 3, '2000-01-01'),
+(4, 2, '2000-06-01'),
+(5, 2, '2000-06-01');
