@@ -64,3 +64,8 @@ SELECT courses.id, courses.course_name, courses.course_description, professors.f
 FROM courses
 JOIN professors
   ON courses.professor_id = professors.id;
+
+SELECT DISTINCT courses.id, courses.course_name, courses.course_description, courses.professor_id
+FROM courses
+JOIN enrollments
+  ON courses.id = enrollments.course_id;
