@@ -41,13 +41,13 @@ INSERT INTO professors (first_name, last_name, department) VALUES
 ('Maia', 'Odling', 'English');
 
 INSERT INTO courses (course_name, course_description, professor_id) VALUES 
-('Algebra', 'algebra course', 1),
-('Biology', 'biology course', 2),
-('World History', 'world history course', 3);
+('Algebra', 'algebra course', SELECT id FROM professors WHERE first_name = 'Joe' AND last_name = 'Marsh'),
+('Biology', 'biology course', SELECT id FROM professors WHERE first_name = 'Laura' AND last_name = 'Barber'),
+('World History', 'world history course', SELECT id FROM professors WHERE first_name = 'Lillian' AND last_name = 'White');
 
 INSERT INTO enrollments (student_id, course_id, enrollment_date) VALUES 
-(1, 3, '2000-01-01'),
-(2, 1, '2000-01-01'),
-(3, 3, '2000-01-01'),
-(4, 2, '2000-06-01'),
-(5, 2, '2000-06-01');
+(SELECT student_id FROM students WHERE first_name = 'John' AND last_name = 'Doe' AND email = 'JohnDoe@gmail.com', SELECT id FROM courses WHERE course_name = 'World History', '2000-01-01'),
+(SELECT student_id FROM students WHERE first_name = 'John' AND last_name = 'Smith' AND email = 'JohnDoe@gmail.com', SELECT id FROM courses WHERE course_name = 'Biology', '2000-01-01'),
+(SELECT student_id FROM students WHERE first_name = 'Adam' AND last_name = 'Mahn' AND email = 'JohnDoe@gmail.com', SELECT id FROM courses WHERE course_name = 'Algebra', '2000-01-01'),
+(SELECT student_id FROM students WHERE first_name = 'Jesse' AND last_name = 'Dane' AND email = 'JohnDoe@gmail.com', SELECT id FROM courses WHERE course_name = 'World History', '2000-01-01'),
+(SELECT student_id FROM students WHERE first_name = 'Hazel' AND last_name = 'Lamb' AND email = 'JohnDoe@gmail.com', SELECT id FROM courses WHERE course_name = 'Biology', '2000-01-01');
