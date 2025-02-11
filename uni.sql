@@ -39,3 +39,8 @@ INSERT INTO professors (first_name, last_name, department) VALUES
 ('Laura', 'Barber', 'Science'),
 ('Lillian', 'White', 'History'),
 ('Maia', 'Odling', 'English');
+
+INSERT INTO courses (course_name, course_description, professor_id) VALUES 
+('Algebra', 'algebra course', 1),
+('Biology', 'biology course', 2),
+('World History', 'world history course', 3);
