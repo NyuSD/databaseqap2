@@ -51,3 +51,11 @@ INSERT INTO enrollments (student_id, course_id, enrollment_date) VALUES
 (SELECT student_id FROM students WHERE first_name = 'Adam' AND last_name = 'Mahn' AND email = 'JohnDoe@gmail.com', SELECT id FROM courses WHERE course_name = 'Algebra', '2000-01-01'),
 (SELECT student_id FROM students WHERE first_name = 'Jesse' AND last_name = 'Dane' AND email = 'JohnDoe@gmail.com', SELECT id FROM courses WHERE course_name = 'World History', '2000-01-01'),
 (SELECT student_id FROM students WHERE first_name = 'Hazel' AND last_name = 'Lamb' AND email = 'JohnDoe@gmail.com', SELECT id FROM courses WHERE course_name = 'Biology', '2000-01-01');
+
+SELECT students.first_name || ' ' || students.last_name AS full_name
+FROM students
+JOIN enrollments
+  ON students.id = enrollments.student_id
+JOIN courses
+  ON enrollments.course_id = courses.id
+WHERE courses.course_name = 'World History';
