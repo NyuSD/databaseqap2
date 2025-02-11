@@ -27,4 +27,10 @@ CREATE TABLE enrollments (
     PRIMARY KEY (student_id, course_id),
 );
 
+INSERT INTO students (first_name, last_name, email, school_enrollment_date) VALUES 
+('John', 'Doe', 'JohnDoe@email.com', '1999-01-01'),
+('John', 'Smith', 'JohnSmith@email.com', '2000-01-01'),
+('Adam', 'Mahn', 'AdamMahn@email.com', '2000-01-01'),
+('Jesse', 'Dane', 'JesseDane@email.com', '2000-06-01'),
+('Hazel', 'Lamb', 'HazelLamb@email.com', '20001-06-01');
 
