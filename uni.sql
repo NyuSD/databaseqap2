@@ -71,3 +71,5 @@ JOIN enrollments
   ON courses.id = enrollments.course_id;
 
 UPDATE students SET email = 'JohnDoe12@email.com' WHERE id = 1;
+
+DELETE FROM enrollments WHERE student_id = 1 AND course_id = 3;
