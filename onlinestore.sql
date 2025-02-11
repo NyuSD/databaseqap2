@@ -31,3 +31,9 @@ INSERT INTO products (product_name, price, stock_quantity) VALUES
 ('Keyboard', 39.99, 20),
 ('Monitor', 199.99, 15),
 ('Printer', 89.99, 5);
+
+INSERT INTO customers (first_name, last_name, email) VALUES
+('Alice', 'Johnson', 'alice@example.com'),
+('Bob', 'Smith', 'bob@example.com'),
+('Carol', 'Davis', 'carol@example.com'),
+('Dave', 'Miller', 'dave@example.com');
