@@ -71,3 +71,8 @@ WHERE orders.customer_id = 1;
 
 UPDATE products SET stock_quantity = stock_quantity - order_items.quantity FROM order_items
 WHERE products.id = order_items.product_id AND order_items.order_id = 1;
+
+DELETE FROM order_items
+WHERE order_id = 1;
+DELETE FROM orders
+WHERE id = 1;
