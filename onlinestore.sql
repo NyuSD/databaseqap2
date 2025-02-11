@@ -25,3 +25,9 @@ CREATE TABLE order_items (
     PRIMARY KEY (order_id, product_id),
 );
 
+INSERT INTO products (product_name, price, stock_quantity) VALUES
+('Laptop', 1200.99, 10),
+('Mouse', 12.49, 50),
+('Keyboard', 39.99, 20),
+('Monitor', 199.99, 15),
+('Printer', 89.99, 5);
