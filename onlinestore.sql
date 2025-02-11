@@ -58,3 +58,8 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (5, 5, 1);
 
 SELECT products.product_name, order_items.quantity FROM products;
+
+SELECT products.product_name, order_items.quantity FROM products
+JOIN order_items
+  ON products.id = order_items.product_id;
+WHERE order_items.order_id = 1;
