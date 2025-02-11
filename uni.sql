@@ -69,3 +69,5 @@ SELECT DISTINCT courses.id, courses.course_name, courses.course_description, cou
 FROM courses
 JOIN enrollments
   ON courses.id = enrollments.course_id;
+
+UPDATE students SET email = 'JohnDoe12@email.com' WHERE id = 1;
