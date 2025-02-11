@@ -56,3 +56,5 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (4, 3, 1),
 (5, 4, 1),
 (5, 5, 1);
+
+SELECT products.product_name, order_items.quantity FROM products;
