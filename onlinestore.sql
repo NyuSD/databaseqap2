@@ -37,3 +37,22 @@ INSERT INTO customers (first_name, last_name, email) VALUES
 ('Bob', 'Smith', 'bob@example.com'),
 ('Carol', 'Davis', 'carol@example.com'),
 ('Dave', 'Miller', 'dave@example.com');
+
+INSERT INTO orders (customer_id, order_date) VALUES
+(1, '2023-01-01'),
+(2, '2023-01-05'),
+(1, '2023-02-10'),
+(4, '2023-02-15'),
+(3, '2023-03-01');
+
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(1, 1, 1),
+(1, 2, 2),
+(2, 3, 1),
+(2, 4, 1),
+(3, 1, 1),
+(3, 5, 1),
+(4, 2, 2),
+(4, 3, 1),
+(5, 4, 1),
+(5, 5, 1);
