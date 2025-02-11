@@ -59,3 +59,8 @@ JOIN enrollments
 JOIN courses
   ON enrollments.course_id = courses.id
 WHERE courses.course_name = 'World History';
+
+SELECT courses.id, courses.course_name, courses.course_description, professors.first_name || ' ' || professors.last_name AS professor_full_name
+FROM courses
+JOIN professors
+  ON courses.professor_id = professors.id;
